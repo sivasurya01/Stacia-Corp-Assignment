@@ -1,7 +1,5 @@
 import React, { Suspense, lazy } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import Loading from "./Components/Loading";
 function App() {
   const LazyloadProducts = lazy(() => import("./Pages/Products"));

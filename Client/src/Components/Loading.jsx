@@ -2,8 +2,11 @@ import React from "react";
 
 function Loading() {
   return (
-    <div className="flex justify-center items-center mt-52">
-      <div role="status">
+    <div className="flex justify-center items-center align-middle h-screen">
+      <div
+        role="status"
+        className="flex justify-center items-center align-middle"
+      >
         <svg
           aria-hidden="true"
           className="w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600"
