@@ -3,9 +3,6 @@ const paymentschema = new mongoose.Schema({
   price: String,
   currency: String,
   creditCardNumber: Number,
-  cvv: String,
-  expirationMonth: Number,
-  creditCardHolderName: String,
   customerFullName: String,
 });
 
