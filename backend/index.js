@@ -26,8 +26,6 @@ app.get("/", (req, res) => {
   res.send("Hello Server is runing!");
 });
 
-
-
 app.use("/payment", require("./controllers/PaymentControl"));
 app.listen(port, () => {
   app.use((req, res, next) => {
