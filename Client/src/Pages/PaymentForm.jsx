@@ -49,7 +49,9 @@ function PaymentForm() {
           .then((res) => {
             console.log(res.data),
               toast.success("Payment Success"),
-              navigate("/");
+              setTimeout(() => {
+                navigate("/");
+              }, 2000);
           })
           .catch((e) => {
             console.log(e), toast.error(e.message);

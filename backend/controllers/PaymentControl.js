@@ -140,6 +140,6 @@ async function storeDatabae(data) {
   await paymentModel
     .create(data)
     .then((res) => console.log(res.json()))
-    .catch((e) => console.log(e.json(e)));
+    .catch((e) => console.log(e));
 }
 module.exports = router;
