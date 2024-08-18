@@ -37,7 +37,7 @@ function PaymentForm() {
         toast.error("Please Fill All Fields");
       } else {
         axios
-          .post("http://localhost:3000/api/pay", {
+          .post("http://localhost:3000/payment", {
             price: formdata.price,
             currency: formdata.Currency,
             creditCardNumber: formdata.creditCardNumber,
