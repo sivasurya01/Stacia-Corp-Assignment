@@ -9,12 +9,9 @@ app.use(express.json());
 require("dotenv").config();
 
 const port = 3000;
-function connection() {
-  mongoose
-    .connect("mongodb://127.0.0.1:27017/demosiva", {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    })
+async function connection() {
+  await mongoose
+    .connect("mongodb://127.0.0.1:27017/staciacorpassignment")
     .then(() => {
       console.log("Connected to MongoDB");
     })

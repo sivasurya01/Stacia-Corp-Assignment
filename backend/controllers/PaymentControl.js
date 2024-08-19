@@ -139,7 +139,7 @@ function determineCardType(cardNumber) {
 async function storeDatabae(data) {
   await paymentModel
     .create(data)
-    .then((res) => console.log(res.json()))
+    .then((res) => console.log(res))
     .catch((e) => console.log(e));
 }
 module.exports = router;
