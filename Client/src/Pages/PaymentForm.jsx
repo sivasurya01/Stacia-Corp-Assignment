@@ -7,9 +7,7 @@ import axios from "axios";
 function PaymentForm() {
   const navigate = useNavigate();
   const { id } = useParams();
-  console.log(id, "id");
   const product = ProductsData.find((data) => data.id == id);
-  console.log(product, "product");
   const currency = ["AUD", "SGD", "EUR", "USD", "THB", "HKD"];
   const [step, setStep] = useState(1);
   const [formdata, serFormData] = useState({
@@ -21,7 +19,6 @@ function PaymentForm() {
     creditCardexpiration: "",
     Currency: "",
   });
-  console.log(formdata, "formdata");
   const handleSubmit = (e) => {
     e.preventDefault();
     try {
