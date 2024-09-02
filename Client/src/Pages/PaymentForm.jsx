@@ -34,7 +34,7 @@ function PaymentForm() {
         toast.error("Please Fill All Fields");
       } else {
         axios
-          .post("http://localhost:3000/payment", {
+          .post("https://stacia-corp-database-assignment.vercel.app/payment", {
             price: formdata.price,
             currency: formdata.Currency,
             creditCardNumber: formdata.creditCardNumber,
