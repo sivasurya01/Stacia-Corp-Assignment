@@ -7,11 +7,20 @@ app.use(cors());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 require("dotenv").config();
-
+app.use(
+  cors({
+    origin: ["https://sivasurya-stacia-corp-assignment.vercel.app/"],
+    methods: ["POST", "GET", "PUT", "DELETE"],
+    credentials: true,
+  })
+);
 const port = 3000;
 async function connection() {
   await mongoose
-    .connect(process.env.MONGO_URI)
+    .connect(process.env.MONGO_URI, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    })
     .then(() => {
       console.log("Connected to MongoDB");
     })
